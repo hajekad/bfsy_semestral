@@ -11,8 +11,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login setActiveRoute={setActiveRoute} />} />
-        <Route path="/list" element={<Overview setActiveRoute={setActiveRoute} />} />
-        <Route path="/shopping_list" element={<ShoppingList setActiveRoute={setActiveRoute} />} />
+        <Route path="/shopping_list" element={<Overview setActiveRoute={setActiveRoute} />} />
+        <Route path="/shopping_list/:listId" element={<ShoppingList setActiveRoute={setActiveRoute} />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,18 @@
+body {
+  background-color: #f9f0ea;
+}
+
+.sakura-card {
+  background: #ffedef;
+  border: 1px solid #ff98a1;
+}
+
+.sakura-btn {
+  background-color: #ff98a1;
+  color: white;
+}
+
+.sakura-btn:hover {
+  background-color: #ff7a89;
+}
+  

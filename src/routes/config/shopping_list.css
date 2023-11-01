@@ -1,0 +1,26 @@
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.member-section {
+  margin-bottom: 20px;
+}
+
+.items-section {
+  margin-bottom: 20px;
+}
+
+.owner-tag {
+  color: #aaa;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.back-btn {
+  display: block;
+  margin-top: 20px;
+}
+  
