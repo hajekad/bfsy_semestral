@@ -24,25 +24,6 @@
   margin-top: 20px;
 }
 
-.owner-btn {
-  margin-left: 10px;
-}
-
-.list-header {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.list-title {
-  margin: 0;
-  margin-right: 10px; /* Adjust as necessary to bring the button closer or further away */
-}
-
-.edit-button {
-  margin: 0;
-}
-
 .user {
   margin-right: 16px; /* This creates space equivalent to approximately two spaces. Adjust as needed. */
 }
