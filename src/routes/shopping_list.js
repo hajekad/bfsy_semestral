@@ -2,27 +2,30 @@ import React, { useState } from 'react';
 import './config/shopping_list.css';
 
 function ShoppingListDetail() {
+  const [owner, member] = useState(true);
   const [showResolved, setShowResolved] = useState(false);
 
   return (
     <div className="container mt-5">
       <div className="list-header">
-        <h4>Shopping List Name</h4>
-        <button className="btn btn-secondary btn-sm">Edit[owner]</button>
+        <h4 className="list-title">Shopping List Name</h4>
+        {owner && (<button className="btn btn-secondary btn-sm edit-button">Edit</button>)}
       </div>
-      
+
       <div className="member-section">
-        <div className="mb-2">
-          <label>Add member:</label>
-          <input type="text" placeholder="xxxxxx" />
-          <span className="owner-tag">[owner]</span>
-        </div>
+        {owner &&
+          <div className="mb-2">
+            <label>Add member:</label>
+            <input type="text" placeholder="xxxxxx" />
+          </div>
+        }
         <div>
-          Members: 
-          <span>User1 (owner)</span>
-          <span>User2 <button className="btn btn-danger btn-sm ml-2">Delete[owner]</button></span>
-          <button className="btn btn-warning btn-sm ml-2">Leave shopping list [if not owner]</button>
+          <span className="user">Other members:</span>
+          <span className="user">User1 (owner)</span>
+          <span className="user">User2 {owner && <button className="btn btn-danger btn-sm ml-2 owner-btn">Delete</button>}</span>
         </div>
+
+        {member && <button className="btn btn-warning btn-sm ml-2 owner-btn">Leave shopping list</button>}
       </div>
 
       <div className="form-check mb-4">
@@ -42,8 +45,8 @@ function ShoppingListDetail() {
           <div key={item} className="d-flex justify-content-between align-items-center mb-2">
             <span>{item}</span>
             <div>
-              <button className="btn btn-primary btn-sm">Mark as Resolved</button>
-              <button className="btn btn-danger btn-sm ml-2">Remove</button>
+              <button className="btn btn-primary btn-sm owner-btn">Mark as Resolved</button>
+              <button className="btn btn-danger btn-sm ml-2 owner-btn">Remove</button>
             </div>
           </div>
         ))}
@@ -55,9 +58,6 @@ function ShoppingListDetail() {
       </div>
 
       <a href="/shopping-list" className="btn btn-secondary btn-sm">Back to Shopping Lists</a>
-      <div className="mt-2">
-        <code>/shopping-list/:listId</code>
-      </div>
     </div>
   );
 }
