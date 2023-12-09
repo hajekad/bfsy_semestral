@@ -1,0 +1,11 @@
+.list-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.archived {
+  color: #aaa;
+  font-style: italic;
+}
+  
